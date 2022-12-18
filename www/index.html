@@ -1,0 +1,497 @@
+<html style="margin:0;overflow:hidden;">
+
+<head>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/font-awesome-4.7.0/css/font-awesome.css">
+
+</head>
+
+<body>
+    <img src="assets/dna_hero_21189708364_1536x768.jpg"
+        style="position:absolute;height: 100%;left: -2%;top: 0%;filter: blur(4px) brightness(40%);opacity: 0.7;transform: translateZ(-544em);">
+    <div id="home" data-depth="2" style="perspective: 500vw; backface-visibility: hidden;
+      position: absolute;height: 100%;width: 100%;top: 0px;left: 0px;/* margin: 0px; */overflow:hidden;margin:0;">
+        <div id="main" class="default"
+            style="perspective: 100vw; position: absolute; height: 100%; width: 100%; display: block; left: 0px; top: 0px;">
+            <div id="mainContent" onclick=" goHomeMain()"
+                style="transform: translateZ(0vw); position: absolute; color: white; width: 181%; height: 181%; top: -39%; left: -18%;">
+                <div class="primaryIndexer" id='primaryIndexer' style="position:absolte;height:100%;width:100%;">
+                    <div id="primaryIndexerContent"
+                        style="position:absolute;left: 10%;top: 2%;height: 88%;width: 80%;background: #ffd400;/* z-index:-1; */">
+                        <h1
+                            style="position:absolute;font-size: 35vh;font-weight: 900;color: #4e4e4e;left: 12%;top: -18%;">
+                            RESULT _</h1>
+                        <div
+                            style="position:absolute;font-size: 2.8vh;font-weight: 700;color: #4e4e4ed9;left: 43%;top: 20%;text-align:right;line-height: 188%;">
+                            Showing <span id="primaryIndexerCount"
+                                style="padding-left: 5vh;padding-top: 1vh;background: black;color: #ffd400;;">3</span>
+                            records <br>matching sequence
+                            <span id='primaryIndexerSeq'
+                                style="padding-left: 5vh;padding-top: 1vh;background: black;color: #ffd400;;">
+                                xxxxxx</span><br> with their respective annotations <br> and relative reads
+                        </div>
+                        <div id="primaryIndexerEntries"
+                            style="position:absolute;width:100%;height: 67%;top: 33%;background-image: radial-gradient(farthest-corner at 0px 0px,#2196f3 -132%, #4c4c4c 80%);overflow:auto;">
+
+
+                        </div>
+                    </div>
+                    <div id="primaryIndexerSearchBar"
+                        style="position:absolute;background: #484848;height: 21%;width: 18%;top: 9%;left: 5%;filter: drop-shadow(30px 41px 28px #000);font-size: 7vh;font-weight:900;">
+                        <p style="color: #ffffff0f;font-size: 12vh;text-align:right;">Primary Indexer</p>
+                        <textarea id="primaryIndexerSearchBarText"
+                            style="position: absolute; color: #ffffffad; width: 41.6%; height: 45%; padding: 0px; border-width: 0px; background: #ffffff00; resize: none; outline: none; right: 54.4%; margin: 0px; top: 52%;overflow:auto;font-family: 'font6';text-align:right;left:0;top: 0px;height: 90%;width:100%;font-size:4vh;">GGCTCGTTGGTCTAGGGGTATGATTCTC</textarea>
+                        <div onclick='primaryIndexerSearch()'
+                            style="position:absolute;padding-left: 4.3vh;padding-top: 2.3vh;background: #2196f3;top: 86%;left: 79%;border-radius: 0.1vw;font-size: 3.9vh;color: #ffffffb3;filter: drop-shadow(30px 41px 116px #2196f3);height: 6vh;width: 15vh;opacity:0.9; cursor:pointer;">
+                            Query
+                            <div
+                                style="position:absolute;bottom: -15%;right: 1%;height: 118%;width: 99%;overflow:hidden;">
+                                <i class="fa fa-search" aria-hidden="true"
+                                    style="position:absolute;top:1%;left: -7%;font-size: 8.6vh;color: #00000036;"></i>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+                <div class="precisionIndexer" id='precisionIndexer'
+                    style="display:none; position:absolte;height:100%;width:100%;">
+                    <div id="precisionIndexerContent"
+                        style="position:absolute;left: 10%;top: 2%;height: 88%;width: 80%;background: #ffd400;/* z-index:-1; */">
+                        <h1
+                            style="position:absolute;font-size: 35vh;font-weight: 900;color: #4e4e4e;left: 12%;top: -18%;">
+                            RESULT _</h1>
+                        <div
+                            style="position:absolute;font-size: 2.8vh;font-weight: 700;color: #4e4e4ed9;left: 43%;top: 20%;text-align:right;line-height: 188%;">
+                            Showing <span id="precisionIndexerCount"
+                                style="padding-left: 5vh;padding-top: 1vh;background: black;color: #ffd400;;">3</span>
+                            records <br>exactly matching sequence
+                            <span id='precisionIndexerSeq'
+                                style="padding-left: 5vh;padding-top: 1vh;background: black;color: #ffd400;;">
+                                xxxxxx</span><br> with their respective annotations <br> and relative reads
+                        </div>
+                        <div id="precisionIndexerEntries"
+                            style="position:absolute;width:100%;height: 67%;top: 33%;background-image: radial-gradient(farthest-corner at 0px 0px,#2196f3 -132%, #4c4c4c 80%);overflow:auto;">
+
+
+                        </div>
+                    </div>
+                    <div id="precisionIndexerSearchBar"
+                        style="position:absolute;background: #484848;height: 21%;width: 18%;top: 9%;left: 5%;filter: drop-shadow(30px 41px 28px #000);font-size: 7vh;font-weight:900;">
+                        <p style="color: #ffffff0f;font-size: 12vh;text-align:right;">Precision Indexer</p>
+                        <textarea id="precisionIndexerSearchBarText"
+                            style="position: absolute; color: #ffffffad; width: 41.6%; height: 45%; padding: 0px; border-width: 0px; background: #ffffff00; resize: none; outline: none; right: 54.4%; margin: 0px; top: 52%;overflow:auto;font-family: 'font6';text-align:right;left:0;top: 0px;height: 90%;width:100%;font-size:4vh;">GGCTCGTTGGTCTAGGGGTATGATTCTC</textarea>
+                        <div onclick='precisionIndexerSearch()'
+                            style="position:absolute;padding-left: 4.3vh;padding-top: 2.3vh;background: #2196f3;top: 86%;left: 79%;border-radius: 0.1vw;font-size: 3.9vh;color: #ffffffb3;filter: drop-shadow(30px 41px 116px #2196f3);height: 6vh;width: 15vh;opacity:0.9; cursor:pointer;">
+                            Querry
+                            <div
+                                style="position:absolute;bottom: -15%;right: 1%;height: 118%;width: 99%;overflow:hidden;">
+                                <i class="fa fa-search" aria-hidden="true"
+                                    style="position:absolute;top:1%;left: -7%;font-size: 8.6vh;color: #00000036;"></i>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <div class="yanhuashu" id="yanhuashu" style="/* display:none; */position:absolte;height:100%;width:100%;">
+                    <div id="yanhuashuContent" style="position:absolute;left: 10%;top: 2%;height: 88%;width: 80%;background: #ffd400;/* z-index:-1; */">
+                        <h1 style="position:absolute;font-size: 35vh;font-weight: 900;color: #4e4e4e;left: 12%;top: -18%;">
+                            RESULT _</h1>
+                        <div style="position:absolute;font-size: 2.8vh;font-weight: 700;color: #4e4e4ed9;left: 43%;top: 20%;text-align:right;line-height: 188%;">
+                            Showing <span id="precisionIndexerCount" style="padding-left: 5vh;padding-top: 1vh;background: black;color: #ffd400;;">3</span>
+                            records <br>exactly matching sequence
+                            <span id="precisionIndexerSeq" style="padding-left: 5vh;padding-top: 1vh;background: black;color: #ffd400;;">
+                                xxxxxx</span><br> with their respective annotations <br> and relative reads
+                        </div>
+                        <div id="yanhuashuEntries" style="position:absolute;width:100%;height: 67%;top: 33%;background-image: radial-gradient(farthest-corner at 0px 0px,#2196f3 -132%, #4c4c4c 80%);overflow:auto;">
+
+
+                        </div>
+                    </div>
+                    <div id="yanhuashuSearchBar" style="position:absolute;background: #484848;height: 21%;width: 18%;top: 9%;left: 5%;filter: drop-shadow(30px 41px 28px #000);font-size: 7vh;font-weight:900;">
+                        <p style="color: #ffffff0f;font-size: 12vh;text-align:right;">TREE</p>
+                        <textarea id="precisionIndexerSearchBarText" style="position: absolute; color: #ffffffad; width: 41.6%; height: 45%; padding: 0px; border-width: 0px; background: #ffffff00; resize: none; outline: none; right: 54.4%; margin: 0px; top: 52%;overflow:auto;font-family: 'font6';text-align:right;left:0;top: 0px;height: 90%;width:100%;font-size:4vh;">ALIGN PREUPLOADED FILE</textarea>
+                        <div onclick="alignSeq()" style="position:absolute;padding-left: 4.3vh;padding-top: 2.3vh;background: #2196f3;top: 86%;left: 79%;border-radius: 0.1vw;font-size: 3.9vh;color: #ffffffb3;filter: drop-shadow(30px 41px 116px #2196f3);height: 6vh;width: 15vh;opacity:0.9; cursor:pointer;">
+                            Querry
+                            <div style="position:absolute;bottom: -15%;right: 1%;height: 118%;width: 99%;overflow:hidden;">
+                                <i class="fa fa-search" aria-hidden="true" style="position:absolute;top:1%;left: -7%;font-size: 8.6vh;color: #00000036;"></i>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+            <div class="rightHome" onclick="goHomeRight()" id="rightHome"
+                style="transform:rotateY(-15.6deg) translateZ(-147vw) translateX(209vw); width: 100%; height: 102%; position: absolute; backdrop-filter: blur(53px);top: -41%;">
+                <img src="assets/horizontalSep1.png"
+                    style="position:absolute;top: 49%;height: 5px;width: 93%;opacity:0.3;">
+                <div class="system"
+                    style="position:absolute;height: 6%;width: 93%;background: rgb(202 246 255 / 5%);top: 0%;padding:2%;">
+                    <i class="fa fa-wifi" aria-hidden="true" style="font-size: 2vw;color: #ffffff8c;"></i>
+                    <span id="sysStatusPing" style="font-size: 2vw;color: #ffffff8c;margin-left: 2%;">100ms</span>
+                    <i class="fa fa-sitemap" aria-hidden="true"
+                        style="font-size: 2vw;color: #ffffff8c;margin-left: 5%;"></i>
+                    <span id="sysStatusInt" style="font-size: 2vw;color: #ffffff8c;margin:1%;">All Systems Online</span>
+                    <i class="fa fa-clock-o" aria-hidden="true"
+                        style="font-size: 2vw;color: #ffffff8c;margin-left: 5%;"></i>
+                    <span style="font-size: 2vw;color: #ffffff8c;margin:1%;">2024/09/28 22:15</span>
+                    <i class="fa fa-id-card-o" aria-hidden="true"
+                        style="font-size: 2vw;color: #ffffff8c;margin-left: 5%;"></i>
+                    <span id="sysStatusUsr" style="font-size: 2vw;color: #ffffff8c;margin:1%;">username</span>
+
+
+                </div>
+
+                <div class="Mask" style="overflow:hidden;top:11%;position:absolute;height:100%;width:100%;">
+                    <div id="" class="ttblock3"
+                        style="position:absolute;width:25%;left:-12.5%;transform: skew(20deg);height:100%;"></div>
+                    <div id="" class="ttblock"
+                        style="position:absolute;width:25%;left:12.5%;      transform: skew(20deg);height:100%;"></div>
+                    <div id="" class="ttblock2"
+                        style="position:absolute;width:25%;left:37.5%;      transform: skew(20deg);height:100%;"></div>
+                    <div id="" class="ttblock"
+                        style="position:absolute;width:25%;left:62.5%;      transform: skew(20deg);height:100%;"></div>
+                    <div id="" class="ttblock3"
+                        style="position:absolute;width:25%;left:87.5%;        transform: skew(20deg);height:100%;">
+                    </div>
+                </div>
+
+                <div class="sanity rightHomeMainBtns"
+                    style="top:11%;position:absolute;height:25%;width:45%;background: rgb(177 182 183);">
+                    <div
+                        style="position:absolute;width: 50.1%;/* height:80%; */left: 11%;/* font-size: 14vh; */overflow:hidden;height:100%;">
+                        <p
+                            style="position:absolute;width: 93.7%;background: #00000045;color: #ffffff96;font-size: 4vh;bottom: 20%;padding-top: 5%;padding-bottom: 5%;text-align:right;padding-right: 4%;filter: drop-shadow(8px 6px 6px rgba(50,50,50,0.9));">
+                            Records</p>
+                        <i class="fa fa-database" aria-hidden="true"
+                            style="position:absolute;top: 20%;left: 3%;color: #949494fa;font-size: 21vh;"></i>
+                        <span
+                            style="position:absolute;top: 32%;left: 18%;font-size: 11vh;color: #00000082;filter: drop-shadow(8px 6px 6px black);">125</span>
+
+                    </div>
+
+                    <div style="position:absolute;width: 23%;height: 100%;left: 63%;font-size: 10vw;overflow:hidden;">
+                        <span
+                            style="position:absolute;top: 34%;left: -25%;font-size: 6vh;color: #00000082;width: 88.5%;text-align:right;filter: drop-shadow(8px 6px 6px black);">/240</span>
+                        <p
+                            style="position:absolute;top: 38.7%;/* left: -9%; *//* color: #9e9e9e; */font-size: 4.7vh;background: #00000045;color: #ffffff96;width: 91%;text-align:center;padding-top: 7.8%;padding-bottom: 9.8%;filter: drop-shadow(8px 6px 6px rgba(50,50,50,0.9));">
+                            Visits</p>
+                    </div>
+
+
+                </div>
+
+
+
+
+                <div id="primaryIndexerBtn" class="rightHomeMainBtns"
+                    style="cursor:pointer; position:absolute;height:25%;width: 53%;background:rgba(255,255,255,0.5);left: 44.9%;top:11%;">
+                    <div style="position:absolute;width: 36%;height:100%;left: 9%;overflow:hidden;">
+                        <p
+                            style="position:absolute;top: 8%;font-size: 6vh;font-weight:900;color: #3a3a3ae6;filter: drop-shadow(8px 6px 6px rgba(50,50,50,0.5));">
+                            Primary Indexer</p>
+                        <p
+                            style="position:absolute;top: 42.7%;font-size: 4vh;/* font-weight:900; */background: #00000045;color: #ffffff73;padding: 5.1%;filter: drop-shadow(8px 6px 6px rgba(50,50,50,0.9));">
+                            Multiple Alignment</p>
+                    </div>
+                    <div style="position:absolute;width: 48%;/* height:30%; */right: 6%;overflow:hidden;height:100%;">
+                        <i class="fa fa-gg" aria-hidden="true"
+                            style="position:absolute;font-weight:900;font-size: 21vw;color: #0000000d;left: -1%;"></i>
+
+                        <p
+                            style="position:absolute;width: 73%;text-align:right;color: #2196f3;font-size: 5vh;top: -4%;line-height: 2vw;font-weight:900;">
+                            sncRNA Querry</p>
+                        <p
+                            style="position:absolute;width: 73%;text-align:right;color: #4e4e4eb3;font-size: 1.4vw;top: 12%;line-height: 2vw;font-weight:900;">
+                            Returns: Relative reads, digestion patterns</p>
+                        <p
+                            style="position:absolute;width: 73%;text-align:right;color: #2196f3;font-size: 5vh;top: 39%;line-height: 2vw;font-weight:900;">
+                            Interference</p>
+                        <p
+                            style="position:absolute;width: 73%;text-align:right;color: #4e4e4eb3;font-size: 1.4vw;top: 53%;line-height: 2vw;font-weight:900;">
+                            smaller RNAs are BLASTed into larger RNAs (if they exist) </p>
+                        <div style="position:absolute;height: 9px;background:#2196f3;width:100%;bottom:0%;"></div>
+
+                    </div>
+                </div>
+
+
+
+                <div id="precisionIndexerBtn" class="rightHomeMainBtns"
+                    style="position:absolute;height: 19%;width: 53%;background: rgb(177 182 183);top: 39%;overflow:hidden;">
+                    <div style="position:absolute;width: 55%;height:100%;left: 9%;overflow:hidden;">
+                        <p
+                            style="position:absolute;top: -25%;font-size: 8vh;font-weight:900;color: #3a3a3ae6;filter: drop-shadow(8px 6px 6px rgba(50,50,50,0.5));">
+                            Knowledge Base</p>
+                        <p
+                            style="position:absolute;top: 44.7%;font-size: 4vh;/* font-weight:900; */background: #00000045;color: #ffffff73;padding: 4.1%;filter: drop-shadow(8px 6px 6px rgba(50,50,50,0.9));">
+                            Introductory Stuff</p>
+                    </div>
+                    <div style="position:absolute;width: 51%;/* height:30%; */right: 0%;overflow:hidden;height:100%;">
+                        <i class="fa fa-graduation-cap" aria-hidden="true"
+                            style="position:absolute;/* font-weight:900; */font-size: 38vh;color: #0000000d;left: 32%;"></i>
+
+                        <p
+                            style="position:absolute;width: 73%;text-align:right;color: #2196f3;font-size: 5vh;top: 6%;line-height: 2vw;font-weight:900;right: 5%;">
+                            Introduction 1</p>
+                        <p
+                            style="position:absolute;width: 73%;text-align:right;color: #4e4e4eb3;font-size: 2vh;top: 27%;line-height: 2vw;font-weight:900;right: 5%;">
+                            aaaaaaaaaaaa</p>
+                        <p
+                            style="position:absolute;width: 73%;text-align:right;color: #2196f3;font-size: 5vh;top: 50%;line-height: 2vw;font-weight:900;right: 5%;">
+                            Introduction 2</p>
+                        <p
+                            style="position:absolute;width: 73%;text-align:right;color: #4e4e4eb3;font-size: 2vh;top: 74%;line-height: 2vw;font-weight:900;right: 5%;">
+                            bbbbbbbbbbb</p>
+                        <div style="position:absolute;height: 9px;background:#2196f3;width:100%;bottom:0%;"></div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="taskForce rightHomeMainBtns"
+                    style="cursor:pointer; position:absolute;height: 19%;width: 36%;background:rgba(255,255,255,0.5);left: 53.9%;top: 39%;overflow:hidden;">
+                    <div style="position:absolute;width: 46%;height:100%;left: 9%;overflow:hidden;">
+                        <p
+                            style="position:absolute;top: 9%;font-size: 5vh;font-weight:900;color: #3a3a3ae6;filter: drop-shadow(8px 6px 6px rgba(50,50,50,0.5));">
+                            Precision Indexer</p>
+                        <p
+                            style="position:absolute;top: 48.7%;font-size: 4vh;/* font-weight:900; */background: #00000045;color: #ffffff73;padding: 5.1%;filter: drop-shadow(8px 6px 6px rgba(50,50,50,0.9));">
+                            Exact Match</p>
+                    </div>
+                    <div style="position:absolute;width: 48%;/* height:30%; */right: -7%;overflow:hidden;height:100%;">
+                        <i class="fa fa-users" aria-hidden="true"
+                            style="position:absolute;/* font-weight:900; */font-size: 10vw;color: #0000000d;left: 15%;top: 16%;"></i>
+
+                        <p
+                            style="position:absolute;width: 73%;text-align:right;color: #2196f3;font-size: 5vh;top: -7%;line-height: 2vw;font-weight:900;">
+                            sncRNA Querry</p>
+                        <p
+                            style="position:absolute;width: 73%;text-align:right;color: #4e4e4eb3;font-size: 3vh;top: 24%;line-height: 2vw;font-weight:900;">
+                            Returns: relative reads, digestion patterns</p>
+                        <p
+                            style="position:absolute;width: 73%;text-align:right;color: #2196f3;font-size: 4vh;top: 64%;line-height: 2vw;font-weight:900;">
+                            Exact Match</p>
+                        <p
+                            style="position:absolute;width: 73%;text-align:right;color: #4e4e4eb3;font-size: 3vh;top: 77%;line-height: 2vw;font-weight:900;">
+                            Show only 100% match.</p>
+                        <div style="position:absolute;height: 9px;background:#2196f3;width:100%;bottom:0%;"></div>
+
+                    </div>
+                </div>
+
+
+
+
+                <div class="forum rightHomeMainBtns"
+                    style="position:absolute;height: 19%;width: 30%;background: #2196f3;left: -0.1%;top: 60%;">
+                    <div style="position:absolute;width: 100%;height:100%;left: 9%;overflow:hidden;">
+                        <p
+                            style="position:absolute;top: 7%;font-size: 7vh;font-weight:900;color: #ffffffad;filter: drop-shadow(8px 6px 6px rgba(255,255,255,0.5));">
+                            Discussion</p>
+                        <p
+                            style="position:absolute;top: 45.7%;font-size: 4vh;font-weight:900;background: #ffffff82;color: #2196f3;padding: 4.1%;filter: drop-shadow(8px 6px 6px rgba(255,255,255,0.9));">
+                            FORUMS</p>
+                    </div>
+
+                    <i class="fa fa-comments-o" aria-hidden="true"
+                        style="position:absolute;/* font-weight:900; */font-size: 10vw;color: #ffffff0d;left: 65%;top: 16%;"></i>
+
+
+                </div>
+
+
+
+
+                <div class="moderationNaccount rightHomeMainBtns"
+                    style="position:absolute;height: 19%;width: 64%;background: #2196f3;left: 30.9%;top: 60%;overflow:hidden;">
+                    <div style="position:absolute;width: 33%;height:100%;left: 9%;overflow:hidden;">
+                        <p
+                            style="position:absolute;top: 39%;font-size: 3vw;font-weight:900;color: #ffffffad;filter: drop-shadow(8px 6px 6px rgba(255,255,255,0.5));">
+                            tba</p>
+                        <p
+                            style="position:absolute;top: 65.7%;font-size: 1.8vw;font-weight:900;background: #ffffff82;color: #2196f3;padding: 4.1%;filter: drop-shadow(8px 6px 6px rgba(255,255,255,0.9));">
+                            tba</p>
+                        <i class="fa fa-book" aria-hidden="true"
+                            style="position:absolute;/* font-weight:900; */font-size: 10vw;color: #ffffff0d;left: 52%;top: 26%;"></i>
+
+                    </div>
+                    <img src="assets/separator.png"
+                        style="position:absolute;left: 43%;height:100%;width:4px;opacity: 50%;">
+
+                    <div style="position:absolute;width: 41%;height:100%;left: 51%;overflow:hidden;">
+                        <p
+                            style="position:absolute;top: 39%;font-size: 3vw;font-weight:900;color: #ffffffad;filter: drop-shadow(8px 6px 6px rgba(255,255,255,0.5));">
+                            tba</p>
+                        <p
+                            style="position:absolute;top: 65.7%;font-size: 1.8vw;font-weight:900;background: #ffffff82;color: #2196f3;padding: 3.1%;filter: drop-shadow(8px 6px 6px rgba(255,255,255,0.9));">
+                            tba</p>
+
+                        <i class="fa fa-wrench" aria-hidden="true"
+                            style="position:absolute;/* font-weight:900; */font-size: 10vw;color: #ffffff0d;left: 58%;top: 20%;"></i>
+                    </div>
+
+
+
+                </div>
+
+
+                <div class="warehouse rightHomeMainBtns"
+                    style="position:absolute;height: 19%;width: 34%;background:rgba(255,255,255,0.5);left: -0.1%;top: 81%;">
+                    <div style="position:absolute;width: 100%;height:100%;left: 9%;overflow:hidden;">
+                        <p
+                            style="position:absolute;top: 39%;font-size: 4vw;font-weight:900;color: #3a3a3ae6;filter: drop-shadow(8px 6px 6px rgba(50,50,50,0.5));">
+                            tba</p>
+                        <p
+                            style="position:absolute;top: 65.7%;font-size: 1.8vw;/* font-weight:900; */background: #00000045;color: #ffffff73;padding: 3.1%;filter: drop-shadow(8px 6px 6px rgba(50,50,50,0.9));">
+                            tba</p>
+                    </div>
+                    <i class="fa fa-home" aria-hidden="true"
+                        style="position:absolute;/* font-weight:900; */font-size: 10vw;color: #0000000d;left: 74%;top: 16%;"></i>
+                </div>
+
+
+
+                <div class="researchCenter rightHomeMainBtns"
+                    style="position:absolute;height: 19%;width: 34%;background:rgba(255,255,255,0.5);left: 34.9%;top: 81%;">
+                    <div style="position:absolute;width: 100%;height:100%;left: 9%;overflow:hidden;">
+                        <p
+                            style="position:absolute;top: 39%;font-size: 4vw;font-weight:900;color: #3a3a3ae6;filter: drop-shadow(8px 6px 6px rgba(50,50,50,0.5));">
+                            tba</p>
+                        <p
+                            style="position:absolute;top: 65.7%;font-size: 1.8vw;/* font-weight:900; */background: #00000045;color: #ffffff73;padding: 3.1%;filter: drop-shadow(8px 6px 6px rgba(50,50,50,0.9));">
+                            tba</p>
+                    </div>
+                    <i class="fa fa-flask" aria-hidden="true"
+                        style="position:absolute;/* font-weight:900; */font-size: 10vw;color: #0000000d;left: 74%;top: 16%;"></i>
+                </div>
+
+
+                <div class="homePlanet rightHomeMainBtns"
+                    style="position:absolute;height: 19%;width: 34%;background:rgba(255,255,255,0.5);left: 69.9%;top: 81%;">
+                    <div style="position:absolute;width: 100%;height:100%;left: 9%;overflow:hidden;">
+                        <p
+                            style="position:absolute;top: 39%;font-size: 4vw;font-weight:900;color: #3a3a3ae6;filter: drop-shadow(8px 6px 6px rgba(50,50,50,0.5));">
+                            tba</p>
+                        <p
+                            style="position:absolute;top: 65.7%;font-size: 1.8vw;/* font-weight:900; */background: #00000045;color: #ffffff73;padding: 3.1%;filter: drop-shadow(8px 6px 6px rgba(50,50,50,0.9));">
+                            tba</p>
+                    </div>
+                    <i class="fa fa-globe" aria-hidden="true"
+                        style="position:absolute;/* font-weight:900; */font-size: 10vw;color: #0000000d;left: 36%;top: 16%;"></i>
+                </div>
+
+
+
+                <img src="assets/horizontalSep2.png"
+                    style="position:absolute;top: 101%;height: 5px;width: 93%;opacity:0.3;">
+            </div>
+
+            <div class="rightHome-alt" id="rightHome-alt"
+                style="transform: rotateY(-15.6deg) translateZ(-148vw) translateX(200vw); width: 19%; height: 317%; position: absolute; backdrop-filter: blur(53px);top: -114%;background: #000000ad;">
+                <div id="primaryIndexerAltBtn" onclick="switch2PrimaryIndexer()"
+                    style="background: #ffd400;width:100%;height: 17%;top: 0%;left: 9%;position:absolute;font-size: 6vh;font-weight:900;overflow:hidden;">
+                    <i class="fa fa-search" aria-hidden="true"
+                        style="position:absolute;top: 5%;left: -14%;font-size: 32vh;color: #ffffffa6;"></i>
+
+                    <span
+                        style="position:absolute;top: 60%;left: 6%;background: #42424245;color: #0000007d;padding-top: 15%;padding-left: 16%;width: 59%;text-align:right;padding-right: 6%;">Vague
+                        Match</span>
+                </div>
+
+                <div id="precisionIndexerAltBtn" onclick="switch2precesionIndexer()"
+                    style="background: #ffd400;width:100%;height: 17%;top: 18%;left: 9%;position:absolute;font-size: 6vh;font-weight:900;overflow:hidden;">
+                    <i class="fa fa-search" aria-hidden="true"
+                        style="position:absolute;top: 5%;left: -14%;font-size: 32vh;color: #ffffffa6;"></i>
+
+                    <span
+                        style="position:absolute;top: 60%;left: 6%;background: #42424245;color: #0000007d;padding-top: 15%;padding-left: 16%;width: 59%;text-align:right;padding-right: 6%;">Exact
+                        Match</span>
+                </div>
+
+                <div id="yanhuashuAltBtn" onclick="switch2yanhuashu()" style="background: #ffd400;width:100%;height: 17%;top: 36%;left: 9%;position:absolute;font-size: 6vh;font-weight:900;overflow:hidden;">
+                    <i class="fa fa-code-fork" aria-hidden="true" style="position:absolute;top: 5%;left: 7%;font-size: 32vh;color: #ffffffa6;"></i>
+
+                    <span style="position:absolute;top: 60%;left: 6%;background: #42424245;color: #0000007d;padding-top: 15%;padding-left: 16%;width: 59%;text-align:right;padding-right: 6%;">TREE</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="visualOverlay">
+
+
+        <div class="retry" id="disconnect"
+            style="position: absolute; left: 0px; width: 100%; height: 100%; top: 0%; background: rgba(122, 122, 122, 0.42); backdrop-filter: blur(20px);">
+            <div class="retryContent"
+                style="position:absolute;background: #404040;top: 38%;height: 27%;width:100%;overflow:hidden;">
+                <div id="retryMainBg"
+                    style="position:absolute;top:0;height:100%;width:100%;/* mix-blend-mode:screen; */">
+                    <img src="assets/cityd.jpg"
+                        style="position:absolute;top: -233.5%;width:100%;/* height:100%; */opacity: 0.15;  /* filter: grayscale(100%); */ filter: invert(0) contrast(2.15) grayscale(100%);mix-blend-mode:screen;">
+                    <div style="position:absolute;top:0;height:100%;width:100%; background-image: linear-gradient(to right, #404040 3px, transparent -3px),
+    linear-gradient(to bottom, #404040 3px, transparent -3px);background-repeat:repeat;background-size: 5px 5px;">
+                    </div>
+                </div>
+                <i class="fa fa-exclamation-triangle" aria-hidden="true"
+                    style="font-size: 25vh;position:absolute;left: -3%;top: -7%;color: #ffffff59;"></i>
+
+                <h1 style="font-size: 9vh;position:absolute;left: 12%;top: -19%;color: #ffffff59;">Connection Lost</h1>
+                <h1 style="font-size: 22vh;position:absolute;left: 11%;top: -55%;color: #00000014;">ERROR</h1>
+
+                <div onclick="init();activateLoading();"
+                    style="font-size: 4vh;position:absolute;left: 0%;bottom: 0%;color: #ffffffe0;background: #2196f3d9;width:100%;text-align:center;overflow:hidden;height: 4.5vh;">
+                    <img src="assets/dottedBg.png"
+                        style="position:absolute;width:100%;opacity: 100%;left:0;top: -1330%;mix-blend-mode:multiply;">
+                    RETRY
+                </div>
+            </div>
+        </div>
+        <div id="loading" class="loading"
+            style="display:none; position:fixed;background: #000000ad;width:102%;left:-1%;height: 11vw;">
+            <div style="position:absolute;top: 3vw;left: 30vw;width: 3vw;height: 3vw;border: solid 1.4vh #fff;transform: rotate(45deg);"
+                class="loadingIcon1"></div>
+            <div class="loadingIcon" id="loadingIcon"
+                style="position:absolute;border: solid 1.4vh #fff;transform: rotate(45deg);"></div>
+            <div style="font-size: 2vw;color: #adadad;top: 40%;left: 36%;position:absolute;">Submitting feedback to the
+                database.</div>
+            <div style="position:absolute;top: 61%;left: 36.1%;font-size: 0.6vw;color:white"><i class="fa fa-copyright"
+                    aria-hidden="true"></i>
+                2022 Qi Chen Lab</div>
+            <div style="font-size: 36vh;color: #ffffff0d;top: -8%;left: 0%;position:absolute;"><i class="fa fa-clock-o"
+                    aria-hidden="true"></i>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="loading.js"></script>
+    <script src="./applets/mainMenu.js"></script>
+    <script src="./applets/precisionIndexer.js"></script>
+    <script src="./applets/primaryIndexer.js"></script>
+    <script src="./applets/tree.js"></script>
+    <script src="ws.js"></script>
+    <script src="main.js"></script>
+    <script src="uiperspective.js"></script>
+
+
+
+
+</body>
+
+</html>

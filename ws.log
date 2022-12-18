@@ -1,0 +1,100 @@
+INFO:MainThread
+	Server is ready to accept
+INFO:MainThread
+	[IN]  CONNECTION: ('10.10.10.57', 8467)
+INFO:MainThread
+	Server is ready to accept
+INFO:Thread-1
+	[IN]  TEXT: ('10.10.10.57', 8467) - '{"action":"ping"}'
+INFO:Thread-1
+	[IN]  TEXT: ('10.10.10.57', 8467) - '{"action":"ping"}'
+INFO:Thread-1
+	[IN]  TEXT: ('10.10.10.57', 8467) - '{"action":"ping"}'
+INFO:Thread-1
+	[IN]  TEXT: ('10.10.10.57', 8467) - '{"action":"ping"}'
+INFO:Thread-1
+	[IN]  TEXT: ('10.10.10.57', 8467) - '{"action":"ping"}'
+INFO:Thread-1
+	[IN]  TEXT: ('10.10.10.57', 8467) - '{"action":"ping"}'
+INFO:Thread-1
+	[IN]  TEXT: ('10.10.10.57', 8467) - '{"action":"ping"}'
+INFO:Thread-1
+	[IN]  TEXT: ('10.10.10.57', 8467) - '{"action":"ping"}'
+INFO:Thread-1
+	[IN]  TEXT: ('10.10.10.57', 8467) - '{"action":"ping"}'
+INFO:Thread-1
+	[IN]  TEXT: ('10.10.10.57', 8467) - '{"action":"ping"}'
+INFO:Thread-1
+	[IN]  TEXT: ('10.10.10.57', 8467) - '{"action":"ping"}'
+INFO:Thread-1
+	[IN]  TEXT: ('10.10.10.57', 8467) - '{"action":"ping"}'
+INFO:Thread-1
+	[IN]  TEXT: ('10.10.10.57', 8467) - '{"action":"ping"}'
+INFO:Thread-1
+	[IN]  TEXT: ('10.10.10.57', 8467) - '{"action":"ping"}'
+INFO:Thread-1
+	[IN]  TEXT: ('10.10.10.57', 8467) - '{"action":"ping"}'
+INFO:Thread-1
+	[IN]  TEXT: ('10.10.10.57', 8467) - '{"action":"ping"}'
+INFO:Thread-1
+	[IN]  TEXT: ('10.10.10.57', 8467) - '{"action":"ping"}'
+INFO:Thread-1
+	[IN]  TEXT: ('10.10.10.57', 8467) - '{"action":"ping"}'
+INFO:Thread-1
+	[IN]  TEXT: ('10.10.10.57', 8467) - '{"action":"ping"}'
+INFO:Thread-1
+	[IN]  TEXT: ('10.10.10.57', 8467) - '{"action":"ping"}'
+INFO:Thread-1
+	[IN]  TEXT: ('10.10.10.57', 8467) - '{"action":"ping"}'
+INFO:Thread-1
+	[IN]  TEXT: ('10.10.10.57', 8467) - '{"action":"ping"}'
+INFO:Thread-1
+	[IN]  TEXT: ('10.10.10.57', 8467) - '{"action":"ping"}'
+INFO:Thread-1
+	[IN]  TEXT: ('10.10.10.57', 8467) - '{"action":"ping"}'
+INFO:Thread-1
+	[IN]  TEXT: ('10.10.10.57', 8467) - '{"action":"ping"}'
+INFO:Thread-1
+	[IN]  TEXT: ('10.10.10.57', 8467) - '{"action":"ping"}'
+INFO:Thread-1
+	[IN]  TEXT: ('10.10.10.57', 8467) - '{"action":"ping"}'
+INFO:Thread-1
+	[IN]  TEXT: ('10.10.10.57', 8467) - '{"action":"ping"}'
+INFO:Thread-1
+	[IN]  TEXT: ('10.10.10.57', 8467) - '{"action":"ping"}'
+INFO:Thread-1
+	[IN]  TEXT: ('10.10.10.57', 8467) - '{"action":"ping"}'
+INFO:Thread-1
+	[IN]  TEXT: ('10.10.10.57', 8467) - '{"action":"ping"}'
+INFO:Thread-1
+	[IN]  TEXT: ('10.10.10.57', 8467) - '{"action":"ping"}'
+INFO:Thread-1
+	[IN]  TEXT: ('10.10.10.57', 8467) - '{"action":"ping"}'
+INFO:Thread-1
+	[IN]  TEXT: ('10.10.10.57', 8467) - '{"action":"ping"}'
+INFO:Thread-1
+	[IN]  TEXT: ('10.10.10.57', 8467) - '{"action":"ping"}'
+INFO:Thread-1
+	[IN]  TEXT: ('10.10.10.57', 8467) - '{"action":"ping"}'
+INFO:Thread-1
+	[IN]  TEXT: ('10.10.10.57', 8467) - '{"action":"ping"}'
+INFO:Thread-1
+	[IN]  TEXT: ('10.10.10.57', 8467) - '{"action":"ping"}'
+INFO:Thread-1
+	[IN]  TEXT: ('10.10.10.57', 8467) - '{"action":"ping"}'
+INFO:Thread-1
+	[IN]  TEXT: ('10.10.10.57', 8467) - '{"action":"ping"}'
+INFO:Thread-1
+	[IN]  TEXT: ('10.10.10.57', 8467) - '{"action":"ping"}'
+INFO:Thread-1
+	[IN]  TEXT: ('10.10.10.57', 8467) - '{"action":"ping"}'
+INFO:Thread-1
+	[IN]  TEXT: ('10.10.10.57', 8467) - '{"action":"ping"}'
+INFO:Thread-1
+	[IN]  TEXT: ('10.10.10.57', 8467) - '{"action":"ping"}'
+INFO:Thread-1
+	[IN]  TEXT: ('10.10.10.57', 8467) - '{"action":"ping"}'
+INFO:Thread-1
+	[IN]  TEXT: ('10.10.10.57', 8467) - '{"action":"ping"}'
+INFO:Thread-1
+	[IN]  TEXT: ('10.10.10.57', 8467) - '{"action":"align"}'
